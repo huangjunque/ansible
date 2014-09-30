@@ -21,7 +21,6 @@ from ansible.inventory.group import Group
 from ansible import errors
 from ansible import utils
 import os
-import yaml
 import sys
 
 class InventoryParserYaml(object):
@@ -194,7 +193,6 @@ if __name__ == "__main__":
 
     newfilepath = os.path.join(dirname, "hosts.new")
     fdh = open(newfilepath, 'w')
-    fdh.write(result)
     fdh.close()
 
     print "* COMPLETE: review your new inventory file and replace your original when ready"
